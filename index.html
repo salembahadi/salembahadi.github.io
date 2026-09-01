@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Salem A. Bahadi | Chemical Engineering Researcher</title>
 
-<meta name="description" content="Academic website of Salem A. Bahadi, Ph.D. Candidate in Chemical Engineering at KFUPM. Research in advanced materials, adsorption, environmental remediation, drilling fluids, H2S scavenging, and AI/ML.">
+<meta name="description"
+content="Academic website of Salem A. Bahadi, Ph.D. Candidate in Chemical Engineering at KFUPM. Research in advanced materials, adsorption, environmental remediation, drilling fluids, H2S scavenging, and AI/ML.">
 
 <style>
 
@@ -14,10 +16,11 @@
     --navy:#0b2239;
     --navy2:#12344d;
     --green:#008568;
+    --green-dark:#006b54;
     --green-light:#eaf7f3;
     --text:#243447;
     --muted:#64748b;
-    --border:#e5eaf0;
+    --border:#e3e9ee;
     --background:#f7f9fb;
     --white:#ffffff;
 }
@@ -30,6 +33,7 @@
 
 html{
     scroll-behavior:smooth;
+    scroll-padding-top:80px;
 }
 
 body{
@@ -45,7 +49,7 @@ a{
 }
 
 a:hover{
-    text-decoration:none;
+    color:var(--green-dark);
 }
 
 .container{
@@ -62,6 +66,7 @@ nav{
     position:sticky;
     top:0;
     z-index:1000;
+    backdrop-filter:blur(8px);
 }
 
 .nav-wrap{
@@ -74,20 +79,20 @@ nav{
 .brand{
     color:var(--navy);
     font-size:20px;
-    font-weight:750;
+    font-weight:800;
     letter-spacing:-.3px;
 }
 
 .nav-links{
     display:flex;
     align-items:center;
-    gap:24px;
+    gap:21px;
 }
 
 .nav-links a{
     color:#425466;
-    font-size:14px;
-    font-weight:600;
+    font-size:13.5px;
+    font-weight:650;
 }
 
 .nav-links a:hover{
@@ -98,7 +103,7 @@ nav{
 /* HERO */
 
 .hero{
-    background:var(--white);
+    background:white;
     border-bottom:1px solid var(--border);
 }
 
@@ -146,7 +151,7 @@ nav{
     line-height:1.85;
     max-width:720px;
     color:#46596b;
-    margin-bottom:29px;
+    margin-bottom:26px;
 }
 
 .research-line{
@@ -181,6 +186,17 @@ nav{
 
 .btn-primary:hover{
     background:var(--navy2);
+    color:white;
+}
+
+.btn-green{
+    background:var(--green);
+    color:white;
+}
+
+.btn-green:hover{
+    background:var(--green-dark);
+    color:white;
 }
 
 .btn-outline{
@@ -202,6 +218,10 @@ nav{
     justify-content:center;
 }
 
+.photo-column{
+    width:315px;
+}
+
 .photo-frame{
     width:315px;
     height:390px;
@@ -217,6 +237,19 @@ nav{
     height:100%;
     object-fit:cover;
     object-position:center 20%;
+}
+
+.photo-caption{
+    margin-top:15px;
+    text-align:center;
+    color:var(--muted);
+    font-size:13px;
+}
+
+.photo-caption strong{
+    color:var(--navy);
+    display:block;
+    font-size:14px;
 }
 
 
@@ -256,10 +289,10 @@ nav{
 }
 
 
-/* GENERAL SECTIONS */
+/* GENERAL */
 
 section.content-section{
-    padding:85px 0;
+    padding:82px 0;
 }
 
 section.alt{
@@ -269,7 +302,7 @@ section.alt{
 }
 
 .section-head{
-    max-width:780px;
+    max-width:800px;
     margin-bottom:42px;
 }
 
@@ -296,38 +329,38 @@ section.alt{
 }
 
 
-/* ABOUT */
+/* BIOGRAPHY */
 
-.about-grid{
+.bio-grid{
     display:grid;
-    grid-template-columns:1.4fr .6fr;
+    grid-template-columns:1.45fr .55fr;
     gap:60px;
 }
 
-.about-text p{
+.bio-text p{
     margin-bottom:18px;
-    font-size:16px;
     color:#46596b;
+    font-size:16px;
 }
 
-.quick-info{
+.profile-facts{
     border-left:3px solid var(--green);
     padding-left:24px;
 }
 
-.quick-item{
-    margin-bottom:20px;
+.fact{
+    margin-bottom:21px;
 }
 
-.quick-label{
+.fact-label{
     color:var(--muted);
-    font-size:12px;
+    font-size:11px;
     font-weight:800;
     text-transform:uppercase;
     letter-spacing:.8px;
 }
 
-.quick-value{
+.fact-value{
     color:var(--navy);
     font-weight:650;
     margin-top:3px;
@@ -376,7 +409,7 @@ section.alt{
 }
 
 
-/* RESEARCH HIGHLIGHTS */
+/* HIGHLIGHTS */
 
 .feature-list{
     display:grid;
@@ -385,7 +418,7 @@ section.alt{
 
 .feature{
     display:grid;
-    grid-template-columns:170px 1fr;
+    grid-template-columns:175px 1fr;
     background:white;
     border:1px solid var(--border);
     border-radius:10px;
@@ -429,7 +462,7 @@ section.alt{
 }
 
 .pub{
-    padding:25px 28px;
+    padding:24px 28px;
     border-bottom:1px solid var(--border);
 }
 
@@ -545,6 +578,12 @@ section.alt{
     padding:26px;
 }
 
+.edu-date{
+    color:var(--green);
+    font-size:13px;
+    font-weight:800;
+}
+
 .edu-card h3{
     color:var(--navy);
     margin:5px 0;
@@ -553,11 +592,6 @@ section.alt{
 .edu-card p{
     color:var(--muted);
     font-size:14px;
-}
-
-.edu-date{
-    color:var(--green) !important;
-    font-weight:750;
 }
 
 
@@ -604,6 +638,31 @@ section.alt{
 
 .patent p{
     color:#d4e0e7;
+}
+
+
+/* CV */
+
+.cv-box{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:40px;
+    align-items:center;
+    background:white;
+    border:1px solid var(--border);
+    border-radius:12px;
+    padding:35px;
+}
+
+.cv-box h3{
+    color:var(--navy);
+    font-size:23px;
+    margin-bottom:8px;
+}
+
+.cv-box p{
+    color:var(--muted);
+    max-width:650px;
 }
 
 
@@ -661,6 +720,11 @@ section.alt{
     color:white;
 }
 
+.contact .btn-outline:hover{
+    border-color:#6ce1c3;
+    color:#6ce1c3;
+}
+
 
 /* FOOTER */
 
@@ -680,7 +744,15 @@ footer{
 
 /* RESPONSIVE */
 
-@media(max-width:900px){
+@media(max-width:950px){
+
+    .nav-links{
+        gap:13px;
+    }
+
+    .nav-links a{
+        font-size:12.5px;
+    }
 
     .hero-grid{
         grid-template-columns:1fr;
@@ -696,8 +768,12 @@ footer{
         justify-content:flex-start;
     }
 
+    .photo-column,
     .photo-frame{
         width:230px;
+    }
+
+    .photo-frame{
         height:280px;
     }
 
@@ -705,8 +781,9 @@ footer{
         font-size:45px;
     }
 
-    .about-grid,
-    .contact-grid{
+    .bio-grid,
+    .contact-grid,
+    .cv-box{
         grid-template-columns:1fr;
     }
 
@@ -729,7 +806,7 @@ footer{
     }
 }
 
-@media(max-width:720px){
+@media(max-width:760px){
 
     .nav-wrap{
         min-height:62px;
@@ -772,31 +849,34 @@ footer{
 </style>
 </head>
 
+
 <body>
 
 
 <!-- NAVIGATION -->
 
 <nav>
+
 <div class="container nav-wrap">
 
     <a href="#" class="brand">Salem A. Bahadi</a>
 
     <div class="nav-links">
-        <a href="#about">About</a>
+        <a href="#biography">Biography</a>
         <a href="#research">Research</a>
         <a href="#publications">Publications</a>
-        <a href="#experience">Experience</a>
         <a href="#teaching">Teaching</a>
         <a href="#awards">Awards</a>
+        <a href="#cv">CV</a>
         <a href="#contact">Contact</a>
     </div>
 
 </div>
+
 </nav>
 
 
-<!-- HERO -->
+<!-- HOME -->
 
 <header class="hero">
 
@@ -820,10 +900,10 @@ footer{
         </div>
 
         <p class="hero-summary">
-            I develop advanced materials and data-driven chemical engineering
-            solutions for environmental and energy applications, with research
-            spanning adsorption and wastewater remediation, H₂S scavenging,
-            drilling-fluid systems, complex fluids, and predictive modeling.
+            Chemical engineering researcher working at the intersection of
+            advanced materials, adsorption, environmental remediation,
+            drilling fluids, H₂S scavenging, complex fluid systems, and
+            data-driven process engineering.
         </p>
 
         <div class="research-line">
@@ -856,22 +936,37 @@ footer{
                 LinkedIn
             </a>
 
-            <a class="btn btn-outline"
-               href="mailto:s.bahadi10@gmail.com">
-                Contact
+            <a class="btn btn-green"
+               href="Salem_Bahadi_CV.pdf"
+               target="_blank">
+                View CV
             </a>
 
         </div>
 
     </div>
 
+
     <div class="photo-area">
-        <div class="photo-frame">
-            <img src="photo.jpg" alt="Salem A. Bahadi">
+
+        <div class="photo-column">
+
+            <div class="photo-frame">
+                <img src="photo.jpg" alt="Salem A. Bahadi">
+            </div>
+
+            <div class="photo-caption">
+                <strong>Salem A. Bahadi</strong>
+                Department of Chemical Engineering<br>
+                KFUPM
+            </div>
+
         </div>
+
     </div>
 
 </div>
+
 </header>
 
 
@@ -902,80 +997,118 @@ footer{
     </div>
 
 </div>
+
 </div>
 
 
-<!-- ABOUT -->
+<!-- BIOGRAPHY -->
 
-<section id="about" class="content-section alt">
+<section id="biography" class="content-section alt">
 
 <div class="container">
 
     <div class="section-head">
-        <div class="section-kicker">Profile</div>
-        <h2 class="section-title">About Me</h2>
+
+        <div class="section-kicker">
+            Biography
+        </div>
+
+        <h2 class="section-title">
+            Academic Biography
+        </h2>
+
     </div>
 
-    <div class="about-grid">
 
-        <div class="about-text">
+    <div class="bio-grid">
+
+        <div class="bio-text">
 
             <p>
-                I am a Ph.D. Candidate in Chemical Engineering at King Fahd
-                University of Petroleum &amp; Minerals (KFUPM), with research
-                experience spanning advanced nanomaterial synthesis,
-                environmental remediation, adsorption processes, drilling
-                fluids, H₂S scavenging, and computational modeling.
+                Salem A. Bahadi is a Ph.D. Candidate in Chemical Engineering
+                at King Fahd University of Petroleum &amp; Minerals (KFUPM),
+                Saudi Arabia. He received his B.S. and M.Sc. degrees in
+                Chemical Engineering from KFUPM and participated in a student
+                exchange program at the University of Florida, United States.
             </p>
 
             <p>
-                My work focuses on engineering multifunctional materials,
-                including graphene-based composites, layered hydroxides,
-                and zeolitic imidazolate frameworks (ZIFs), and connecting
-                their physicochemical characteristics with performance in
-                environmental and energy-related applications.
+                His research focuses on advanced nanomaterials, adsorption,
+                environmental remediation, drilling fluids, H₂S scavenging,
+                complex fluid systems, and data-driven chemical engineering.
+                His work includes the development of multicomponent adsorbents
+                based on graphene, clay, layered hydroxides, and zeolitic
+                imidazolate frameworks for wastewater treatment and
+                energy-related applications.
             </p>
 
             <p>
-                I also integrate experimental research with hybrid artificial
-                intelligence and ensemble machine-learning approaches to
-                forecast adsorption behavior and support process optimization.
-                My broader objective is to contribute to sustainable process
-                engineering through materials innovation, rigorous
-                experimentation, and predictive modeling.
+                His current Ph.D. research focuses on functionalized
+                water- and oil-based drilling-fluid systems for H₂S removal,
+                with particular attention to material functionality,
+                rheological behavior, and operational performance.
+            </p>
+
+            <p>
+                His research also integrates experimental characterization
+                with computational forecasting through hybrid artificial
+                intelligence and ensemble machine-learning models. His
+                experimental experience includes FT-IR, XRD, TGA, DLS/zeta
+                potential, UV–Vis spectroscopy, and rheometry.
+            </p>
+
+            <p>
+                In addition to research, he has experience in laboratory
+                instruction, teaching assistance, undergraduate research
+                supervision, scientific peer review, and technical mentoring.
+                He has supervised more than ten undergraduate researchers
+                across projects involving wastewater treatment, drilling
+                fluids, and H₂S scavenging.
             </p>
 
         </div>
 
-        <div class="quick-info">
 
-            <div class="quick-item">
-                <div class="quick-label">Current Position</div>
-                <div class="quick-value">
-                    Ph.D. Candidate, Chemical Engineering
+        <div class="profile-facts">
+
+            <div class="fact">
+                <div class="fact-label">Position</div>
+                <div class="fact-value">
+                    Ph.D. Candidate
                 </div>
             </div>
 
-            <div class="quick-item">
-                <div class="quick-label">Institution</div>
-                <div class="quick-value">KFUPM</div>
+            <div class="fact">
+                <div class="fact-label">Department</div>
+                <div class="fact-value">
+                    Chemical Engineering
+                </div>
             </div>
 
-            <div class="quick-item">
-                <div class="quick-label">Ph.D. Research</div>
-                <div class="quick-value">
+            <div class="fact">
+                <div class="fact-label">Institution</div>
+                <div class="fact-value">
+                    KFUPM
+                </div>
+            </div>
+
+            <div class="fact">
+                <div class="fact-label">Ph.D. Research</div>
+                <div class="fact-value">
                     Drilling Fluids &amp; H₂S Scavenging
                 </div>
             </div>
 
-            <div class="quick-item">
-                <div class="quick-label">Expected Graduation</div>
-                <div class="quick-value">December 2026</div>
+            <div class="fact">
+                <div class="fact-label">Expected Graduation</div>
+                <div class="fact-value">
+                    December 2026
+                </div>
             </div>
 
-            <div class="quick-item">
-                <div class="quick-label">Location</div>
-                <div class="quick-value">
+            <div class="fact">
+                <div class="fact-label">Location</div>
+                <div class="fact-value">
                     Dhahran, Saudi Arabia
                 </div>
             </div>
@@ -985,6 +1118,7 @@ footer{
     </div>
 
 </div>
+
 </section>
 
 
@@ -996,73 +1130,96 @@ footer{
 
     <div class="section-head">
 
-        <div class="section-kicker">Research</div>
+        <div class="section-kicker">
+            Research
+        </div>
 
         <h2 class="section-title">
             Research Expertise
         </h2>
 
         <p class="section-intro">
-            My research combines materials engineering, interfacial and
-            adsorption phenomena, complex fluids, environmental applications,
+            Research spanning advanced materials, environmental applications,
+            complex fluids, adsorption phenomena, energy-related systems,
             and computational prediction.
         </p>
 
     </div>
 
+
     <div class="research-grid">
 
         <div class="research-card">
+
             <div class="card-number">01</div>
 
-            <h3>Advanced Materials &amp; Adsorption</h3>
+            <h3>
+                Advanced Materials &amp; Adsorption
+            </h3>
 
             <p>
-                Design and characterization of graphene-based materials,
-                layered hydroxides, ZIFs, and multicomponent nanocomposites
-                for adsorption and separation applications.
+                Design, synthesis, functionalization, and characterization of
+                graphene-based materials, layered hydroxides, ZIFs, and
+                multicomponent nanocomposites for adsorption and separation.
             </p>
+
         </div>
 
+
         <div class="research-card">
+
             <div class="card-number">02</div>
 
-            <h3>Environmental Remediation</h3>
+            <h3>
+                Environmental Remediation
+            </h3>
 
             <p>
-                Development of adsorbents for the removal of dyes,
+                Development of advanced adsorbents for removing dyes,
                 phenolic compounds, heavy metals, and other organic and
                 inorganic pollutants from contaminated water.
             </p>
+
         </div>
 
+
         <div class="research-card">
+
             <div class="card-number">03</div>
 
-            <h3>Drilling Fluids &amp; H₂S Scavenging</h3>
+            <h3>
+                Drilling Fluids &amp; H₂S Scavenging
+            </h3>
 
             <p>
                 Formulation and optimization of water- and oil-based drilling
-                fluids with emphasis on H₂S removal, rheological performance,
-                and operational stability.
+                fluids with emphasis on H₂S removal, rheological behavior,
+                material functionality, and operational stability.
             </p>
+
         </div>
 
+
         <div class="research-card">
+
             <div class="card-number">04</div>
 
-            <h3>AI &amp; Machine Learning</h3>
+            <h3>
+                Artificial Intelligence &amp; Machine Learning
+            </h3>
 
             <p>
-                Application of hybrid artificial intelligence and ensemble
-                machine-learning models for adsorption prediction and
+                Application of hybrid AI and ensemble machine-learning models
+                for predicting adsorption performance and supporting
                 chemical-process optimization.
             </p>
+
         </div>
 
     </div>
 
 </div>
+
 </section>
 
 
@@ -1073,9 +1230,17 @@ footer{
 <div class="container">
 
     <div class="section-head">
-        <div class="section-kicker">Selected Work</div>
-        <h2 class="section-title">Research Highlights</h2>
+
+        <div class="section-kicker">
+            Research Portfolio
+        </div>
+
+        <h2 class="section-title">
+            Research Highlights
+        </h2>
+
     </div>
+
 
     <div class="feature-list">
 
@@ -1086,19 +1251,23 @@ footer{
             </div>
 
             <div class="feature-body">
+
                 <h3>
-                    Multifunctional adsorbents for contaminated water
+                    Multifunctional materials for water decontamination
                 </h3>
 
                 <p>
-                    Developed multicomponent materials including
+                    Developed multicomponent adsorbents including
                     GO/Clay/MgFeAl-LTH and Layered Triple Hydroxide/ZIF
                     nanocomposites for removing anionic and cationic dyes,
-                    phenolic compounds, and heavy metals from aqueous systems.
+                    phenolic compounds, and heavy metals from contaminated
+                    water.
                 </p>
+
             </div>
 
         </div>
+
 
         <div class="feature">
 
@@ -1107,19 +1276,22 @@ footer{
             </div>
 
             <div class="feature-body">
+
                 <h3>
-                    Functional drilling fluids for H₂S control
+                    Functional drilling-fluid systems for H₂S control
                 </h3>
 
                 <p>
-                    Research on water- and oil-based drilling-fluid systems
-                    incorporating functional materials for hydrogen sulfide
-                    scavenging while maintaining appropriate rheological
-                    characteristics.
+                    Research on functionalized water- and oil-based
+                    drilling-fluid systems designed to enhance hydrogen
+                    sulfide scavenging while maintaining appropriate
+                    rheological and operational characteristics.
                 </p>
+
             </div>
 
         </div>
+
 
         <div class="feature">
 
@@ -1128,16 +1300,42 @@ footer{
             </div>
 
             <div class="feature-body">
+
                 <h3>
                     Machine learning for adsorption prediction
                 </h3>
 
                 <p>
-                    Applied optimal hybrid AI and ensemble meta-machine-learning
-                    models to predict adsorption of dyes and phenolic compounds,
-                    supporting reduced experimental dependency and improved
-                    process-design insight.
+                    Applied optimal hybrid artificial-intelligence and
+                    ensemble meta-machine-learning approaches to predict
+                    adsorption behavior and support process-design
+                    optimization.
                 </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-side">
+                Complex Fluids
+            </div>
+
+            <div class="feature-body">
+
+                <h3>
+                    Biosurfactant-stabilized crude-oil nanoemulsions
+                </h3>
+
+                <p>
+                    Formulated and characterized crude oil-in-water
+                    nanoemulsions stabilized by environmentally friendly
+                    biosurfactants and investigated their stability and
+                    pH-switchable demulsification behavior.
+                </p>
+
             </div>
 
         </div>
@@ -1145,6 +1343,7 @@ footer{
     </div>
 
 </div>
+
 </section>
 
 
@@ -1167,8 +1366,8 @@ footer{
         <p class="section-intro">
             Peer-reviewed publications spanning adsorption, environmental
             remediation, advanced materials, artificial intelligence,
-            drilling fluids, H₂S scavenging, and energy applications.
-            For the complete and current citation record, see my
+            drilling fluids, H₂S scavenging, complex fluids, and energy
+            applications. For the current citation record, see my
             <a href="https://scholar.google.com/citations?user=uCiFhloAAAAJ&amp;hl=en"
                target="_blank"
                rel="noopener noreferrer">Google Scholar</a>
@@ -1185,21 +1384,19 @@ footer{
     <div class="publication-list">
 
 
-        <!-- 2026 -->
-
         <div class="pub">
 
             <div class="pub-year">2026</div>
 
             <div class="pub-title">
-                Removal of Various Dyes, Phenols, and Heavy Metals from Wastewater
-                using Calcined and Non-Calcined Layered Triple Hydroxide/Zeolitic
-                Imidazolate Framework Nanocomposites
+                Removal of Various Dyes, Phenols, and Heavy Metals from
+                Wastewater using Calcined and Non-Calcined Layered Triple
+                Hydroxide/Zeolitic Imidazolate Framework Nanocomposites
             </div>
 
             <div class="pub-authors">
-                <strong>S.A. Bahadi</strong>, M.Q. Alkoshab, W.A. Al-Amrani,
-                Q.A. Drmosh, S.A. Onaizi
+                <strong>S.A. Bahadi</strong>, M.Q. Alkoshab,
+                W.A. Al-Amrani, Q.A. Drmosh, S.A. Onaizi
             </div>
 
             <div class="pub-journal">
@@ -1216,8 +1413,6 @@ footer{
         </div>
 
 
-        <!-- 2025 -->
-
         <div class="pub">
 
             <div class="pub-year">2025</div>
@@ -1228,8 +1423,8 @@ footer{
             </div>
 
             <div class="pub-authors">
-                <strong>S.A. Bahadi</strong>, W.A. Al-Amrani, Q.A. Drmosh,
-                M. Hossain, S.A. Onaizi
+                <strong>S.A. Bahadi</strong>, W.A. Al-Amrani,
+                Q.A. Drmosh, M. Hossain, S.A. Onaizi
             </div>
 
             <div class="pub-journal">
@@ -1273,8 +1468,6 @@ footer{
         </div>
 
 
-        <!-- 2024 -->
-
         <div class="pub">
 
             <div class="pub-year">2024</div>
@@ -1307,8 +1500,8 @@ footer{
             <div class="pub-year">2024</div>
 
             <div class="pub-title">
-                Adsorptive removal of organic pollutants from aqueous solutions
-                using novel GO/bentonite/MgFeAl-LTH nanocomposite
+                Adsorptive removal of organic pollutants from aqueous
+                solutions using novel GO/bentonite/MgFeAl-LTH nanocomposite
             </div>
 
             <div class="pub-authors">
@@ -1344,8 +1537,8 @@ footer{
             </div>
 
             <div class="pub-journal">
-                Colloids and Surfaces A: Physicochemical and Engineering Aspects,
-                688, 133579
+                Colloids and Surfaces A: Physicochemical and Engineering
+                Aspects, 688, 133579
             </div>
 
             <a class="pub-link"
@@ -1369,8 +1562,9 @@ footer{
             </div>
 
             <div class="pub-authors">
-                M. Iddrisu, <strong>S.A. Bahadi</strong>, M.K. Al-Sakkaf,
-                U. Ahmed, U. Zahid, Q.A. Drmosh, S.A. Onaizi
+                M. Iddrisu, <strong>S.A. Bahadi</strong>,
+                M.K. Al-Sakkaf, U. Ahmed, U. Zahid, Q.A. Drmosh,
+                S.A. Onaizi
             </div>
 
             <div class="pub-journal">
@@ -1386,8 +1580,6 @@ footer{
 
         </div>
 
-
-        <!-- 2023 -->
 
         <div class="pub">
 
@@ -1424,8 +1616,8 @@ footer{
 
             <div class="pub-title">
                 An Up-to-Date Review on the Remediation of Dyes and Phenolic
-                Compounds from Wastewaters Using Enzymes Immobilized on Emerging
-                and Nanostructured Materials: Promises and Challenges
+                Compounds from Wastewaters Using Enzymes Immobilized on
+                Emerging and Nanostructured Materials: Promises and Challenges
             </div>
 
             <div class="pub-authors">
@@ -1454,9 +1646,9 @@ footer{
 
             <div class="pub-title">
                 Optimal hybrid artificial intelligence models for predicting
-                the adsorptive removal of dyes and phenols from aqueous solutions
-                using an amine-functionalized graphene oxide/layered triple
-                hydroxide nanocomposite
+                the adsorptive removal of dyes and phenols from aqueous
+                solutions using an amine-functionalized graphene oxide/layered
+                triple hydroxide nanocomposite
             </div>
 
             <div class="pub-authors">
@@ -1489,9 +1681,9 @@ footer{
             </div>
 
             <div class="pub-authors">
-                <strong>S.A. Bahadi</strong>, M. Iddrisu, M.K. Al-Sakkaf,
-                S. Mohammed, W. Ahmed, A. Amrani, U. Ahmed, U. Zahid,
-                Q.A. Drmosh, S.A. Onaizi
+                <strong>S.A. Bahadi</strong>, M. Iddrisu,
+                M.K. Al-Sakkaf, S. Mohammed, W. Ahmed, A. Amrani,
+                U. Ahmed, U. Zahid, Q.A. Drmosh, S.A. Onaizi
             </div>
 
             <div class="pub-journal">
@@ -1519,9 +1711,9 @@ footer{
             </div>
 
             <div class="pub-authors">
-                <strong>S.A. Bahadi</strong>, M. Iddrisu, M.K. Al-Sakkaf,
-                M.A.A. Elgzoly, Q.A. Drmosh, W.A. Al-Amrani,
-                U. Ahmed, U. Zahid, S.A. Onaizi
+                <strong>S.A. Bahadi</strong>, M. Iddrisu,
+                M.K. Al-Sakkaf, M.A.A. Elgzoly, Q.A. Drmosh,
+                W.A. Al-Amrani, U. Ahmed, U. Zahid, S.A. Onaizi
             </div>
 
             <div class="pub-journal">
@@ -1549,8 +1741,9 @@ footer{
             </div>
 
             <div class="pub-authors">
-                M. Iddrisu, M.K. Al-Sakkaf, <strong>S.A. Bahadi</strong>,
-                U. Zahid, Q.A. Drmosh, U. Ahmed, S.A. Onaizi
+                M. Iddrisu, M.K. Al-Sakkaf,
+                <strong>S.A. Bahadi</strong>, U. Zahid, Q.A. Drmosh,
+                U. Ahmed, S.A. Onaizi
             </div>
 
             <div class="pub-journal">
@@ -1567,15 +1760,14 @@ footer{
         </div>
 
 
-        <!-- 2022 -->
-
         <div class="pub">
 
             <div class="pub-year">2022</div>
 
             <div class="pub-title">
                 Heavy metals adsorption onto graphene oxide:
-                effect of mixed systems and response surface methodology modeling
+                effect of mixed systems and response surface methodology
+                modeling
             </div>
 
             <div class="pub-authors">
@@ -1597,8 +1789,6 @@ footer{
         </div>
 
 
-        <!-- 2021 -->
-
         <div class="pub">
 
             <div class="pub-year">2021</div>
@@ -1614,7 +1804,8 @@ footer{
             </div>
 
             <div class="pub-journal">
-                Journal of Petroleum Science and Engineering, 198, 108173
+                Journal of Petroleum Science and Engineering,
+                198, 108173
             </div>
 
             <a class="pub-link"
@@ -1626,22 +1817,157 @@ footer{
 
         </div>
 
+
     </div>
 
 </div>
+
 </section>
 
 
-<!-- EXPERIENCE -->
+<!-- EDUCATION -->
 
-<section id="experience" class="content-section alt">
+<section class="content-section alt">
 
 <div class="container">
 
     <div class="section-head">
-        <div class="section-kicker">Experience</div>
-        <h2 class="section-title">Research Experience</h2>
+
+        <div class="section-kicker">
+            Academic Background
+        </div>
+
+        <h2 class="section-title">
+            Education
+        </h2>
+
     </div>
+
+
+    <div class="education-grid">
+
+        <div class="edu-card">
+
+            <div class="edu-date">
+                2023 – Present
+            </div>
+
+            <h3>
+                Ph.D. Chemical Engineering
+            </h3>
+
+            <p>
+                King Fahd University of Petroleum &amp; Minerals
+            </p>
+
+            <p>
+                Research Area: Drilling Fluid &amp; H₂S Scavenging
+            </p>
+
+            <p>
+                CGPA: 3.821 / 4.00
+            </p>
+
+            <p>
+                Expected Graduation: December 2026
+            </p>
+
+        </div>
+
+
+        <div class="edu-card">
+
+            <div class="edu-date">
+                2019 – 2022
+            </div>
+
+            <h3>
+                M.Sc. Chemical Engineering
+            </h3>
+
+            <p>
+                King Fahd University of Petroleum &amp; Minerals
+            </p>
+
+            <p>
+                Thesis: The formulation and characterization of novel
+                adsorbents using metal hydroxides, graphene, and clay for
+                the effective removal of organic pollutants from wastewater.
+            </p>
+
+            <p>
+                CGPA: 3.786 / 4.00
+            </p>
+
+        </div>
+
+
+        <div class="edu-card">
+
+            <div class="edu-date">
+                2015 – 2019
+            </div>
+
+            <h3>
+                B.S. Chemical Engineering
+            </h3>
+
+            <p>
+                King Fahd University of Petroleum &amp; Minerals
+            </p>
+
+            <p>
+                Second Honor · GPA 3.535 / 4.00
+            </p>
+
+        </div>
+
+
+        <div class="edu-card">
+
+            <div class="edu-date">
+                2017
+            </div>
+
+            <h3>
+                Student Exchange Program
+            </h3>
+
+            <p>
+                University of Florida
+            </p>
+
+            <p>
+                Florida, United States
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- RESEARCH EXPERIENCE -->
+
+<section id="experience" class="content-section">
+
+<div class="container">
+
+    <div class="section-head">
+
+        <div class="section-kicker">
+            Experience
+        </div>
+
+        <h2 class="section-title">
+            Research Experience
+        </h2>
+
+    </div>
+
 
     <div class="timeline">
 
@@ -1652,7 +1978,7 @@ footer{
             </div>
 
             <h3>
-                Drilling Fluid &amp; H₂S Scavenger Research
+                Drilling Fluid &amp; H₂S Scavenger
             </h3>
 
             <div class="timeline-org">
@@ -1660,9 +1986,10 @@ footer{
             </div>
 
             <p>
-                Engineering functionalized water- and oil-based drilling-fluid
-                systems for H₂S removal and systematically optimizing
-                rheological performance for operational stability and efficiency.
+                Engineered functionalized water- and oil-based drilling-fluid
+                systems for H₂S removal and systematically optimized their
+                rheological properties to support operational stability and
+                efficiency.
             </p>
 
         </div>
@@ -1675,7 +2002,7 @@ footer{
             </div>
 
             <h3>
-                Wastewater Treatment Research
+                Wastewater Treatment
             </h3>
 
             <div class="timeline-org">
@@ -1683,9 +2010,10 @@ footer{
             </div>
 
             <p>
-                Developed multicomponent adsorbents and nanocomposites for
-                removing dyes, phenolic compounds, and heavy metals from
-                contaminated water.
+                Engineered multicomponent adsorbents including
+                GO/Clay/MgFeAl-LTH and Layered Triple Hydroxide/ZIF
+                nanocomposites for removing dyes, phenolic compounds,
+                and heavy metals from contaminated water.
             </p>
 
         </div>
@@ -1706,9 +2034,9 @@ footer{
             </div>
 
             <p>
-                Developed and applied hybrid AI and ensemble
-                meta-machine-learning models for predicting adsorption
-                performance and supporting process optimization.
+                Developed and applied hybrid artificial-intelligence and
+                ensemble meta-machine-learning models to predict adsorptive
+                removal of dyes and phenols from aqueous solutions.
             </p>
 
         </div>
@@ -1731,7 +2059,8 @@ footer{
             <p>
                 Formulated and characterized crude oil-in-water nanoemulsions
                 stabilized by environmentally friendly biosurfactants and
-                investigated stability and pH-switchable demulsification.
+                investigated fluid stability and pH-switchable
+                demulsification.
             </p>
 
         </div>
@@ -1739,98 +2068,7 @@ footer{
     </div>
 
 </div>
-</section>
 
-
-<!-- EDUCATION -->
-
-<section class="content-section">
-
-<div class="container">
-
-    <div class="section-head">
-        <div class="section-kicker">Academic Background</div>
-        <h2 class="section-title">Education</h2>
-    </div>
-
-    <div class="education-grid">
-
-        <div class="edu-card">
-
-            <p class="edu-date">2023 – Present</p>
-
-            <h3>Ph.D. Chemical Engineering</h3>
-
-            <p>
-                King Fahd University of Petroleum &amp; Minerals
-            </p>
-
-            <p>
-                Research: Drilling Fluid &amp; H₂S Scavenging
-            </p>
-
-            <p>CGPA: 3.821 / 4.00</p>
-
-            <p>
-                Expected Graduation: December 2026
-            </p>
-
-        </div>
-
-
-        <div class="edu-card">
-
-            <p class="edu-date">2019 – 2022</p>
-
-            <h3>M.Sc. Chemical Engineering</h3>
-
-            <p>
-                King Fahd University of Petroleum &amp; Minerals
-            </p>
-
-            <p>
-                Thesis: The formulation and characterization of novel
-                adsorbents using metal hydroxides, graphene, and clay for
-                the effective removal of organic pollutants from wastewater.
-            </p>
-
-            <p>CGPA: 3.786 / 4.00</p>
-
-        </div>
-
-
-        <div class="edu-card">
-
-            <p class="edu-date">2015 – 2019</p>
-
-            <h3>B.S. Chemical Engineering</h3>
-
-            <p>
-                King Fahd University of Petroleum &amp; Minerals
-            </p>
-
-            <p>
-                Second Honor · GPA 3.535 / 4.00
-            </p>
-
-        </div>
-
-
-        <div class="edu-card">
-
-            <p class="edu-date">2017</p>
-
-            <h3>Student Exchange Program</h3>
-
-            <p>University of Florida</p>
-
-            <p>Florida, United States</p>
-
-        </div>
-
-    </div>
-
-</div>
 </section>
 
 
@@ -1841,9 +2079,17 @@ footer{
 <div class="container">
 
     <div class="section-head">
-        <div class="section-kicker">Academic Service</div>
-        <h2 class="section-title">Teaching &amp; Mentoring</h2>
+
+        <div class="section-kicker">
+            Teaching &amp; Academic Service
+        </div>
+
+        <h2 class="section-title">
+            Teaching, Mentoring &amp; Service
+        </h2>
+
     </div>
+
 
     <div class="timeline">
 
@@ -1853,7 +2099,9 @@ footer{
                 2023 – Present
             </div>
 
-            <h3>Laboratory Instructor</h3>
+            <h3>
+                Laboratory Instructor
+            </h3>
 
             <div class="timeline-org">
                 Chemical Engineering Department · KFUPM
@@ -1875,7 +2123,9 @@ footer{
                 2019 – Present
             </div>
 
-            <h3>Undergraduate Research Supervisor</h3>
+            <h3>
+                Undergraduate Research Supervisor
+            </h3>
 
             <div class="timeline-org">
                 Chemical Engineering Department · KFUPM
@@ -1884,8 +2134,9 @@ footer{
             <p>
                 Supervised more than ten undergraduate researchers across
                 funded projects in wastewater treatment, drilling fluids,
-                and H₂S scavenging, including guidance in experimental design,
-                instrumentation, data interpretation, and research reporting.
+                and H₂S scavenging. Guidance included experimental design,
+                rheometry, UV–Vis analysis, data interpretation, and research
+                reporting.
             </p>
 
         </div>
@@ -1897,7 +2148,9 @@ footer{
                 2017 – 2022
             </div>
 
-            <h3>Teaching Assistant</h3>
+            <h3>
+                Teaching Assistant
+            </h3>
 
             <div class="timeline-org">
                 Chemical Engineering Department · KFUPM
@@ -1907,7 +2160,8 @@ footer{
                 Supported undergraduate and graduate courses including
                 Fluid Mechanics, Heat Transfer, Thermodynamics, Mass Transfer,
                 Stagewise Separation, Chemical Engineering Laboratory I,
-                Reactor Design, and Numerical Methods in Chemical Engineering.
+                Kinetics and Reactor Design, and Numerical Methods in
+                Chemical Engineering.
             </p>
 
         </div>
@@ -1919,15 +2173,40 @@ footer{
                 2025 – Present
             </div>
 
-            <h3>Peer Reviewer</h3>
+            <h3>
+                Peer Reviewer
+            </h3>
 
             <div class="timeline-org">
                 Scientific Journals
             </div>
 
             <p>
-                Invited reviewer for more than 20 manuscripts in materials
-                science and chemical engineering.
+                Invited peer reviewer for leading scientific journals,
+                with experience reviewing more than 20 manuscripts in
+                materials science and chemical-engineering processes.
+            </p>
+
+        </div>
+
+
+        <div class="timeline-item">
+
+            <div class="timeline-date">
+                2025
+            </div>
+
+            <h3>
+                Mentor · CITEthon
+            </h3>
+
+            <div class="timeline-org">
+                CITE Conference · KFUPM
+            </div>
+
+            <p>
+                Provided technical and structural guidance to participating
+                teams during the CITEthon competition.
             </p>
 
         </div>
@@ -1935,6 +2214,7 @@ footer{
     </div>
 
 </div>
+
 </section>
 
 
@@ -1945,9 +2225,17 @@ footer{
 <div class="container">
 
     <div class="section-head">
-        <div class="section-kicker">Innovation</div>
-        <h2 class="section-title">Intellectual Property</h2>
+
+        <div class="section-kicker">
+            Innovation
+        </div>
+
+        <h2 class="section-title">
+            Intellectual Property
+        </h2>
+
     </div>
+
 
     <div class="patent">
 
@@ -1970,6 +2258,7 @@ footer{
     </div>
 
 </div>
+
 </section>
 
 
@@ -1980,9 +2269,17 @@ footer{
 <div class="container">
 
     <div class="section-head">
-        <div class="section-kicker">Recognition</div>
-        <h2 class="section-title">Selected Awards &amp; Honors</h2>
+
+        <div class="section-kicker">
+            Recognition
+        </div>
+
+        <h2 class="section-title">
+            Awards &amp; Honors
+        </h2>
+
     </div>
+
 
     <div class="awards">
 
@@ -1991,7 +2288,7 @@ footer{
                 1st Place — Graduate Division, MENA Region Student Design Competition
             </strong>
             <br>
-            Digital Flow Assurance Symposium, Doha, Qatar · 2025
+            Digital Flow Assurance Symposium · Doha, Qatar · 2025
         </div>
 
         <div class="award">
@@ -1999,7 +2296,7 @@ footer{
                 Second Place — 5th KFUPM Student Research Contest
             </strong>
             <br>
-            Advanced adsorbent materials for wastewater treatment · 2025
+            Research on advanced adsorbent materials for wastewater treatment · 2025
         </div>
 
         <div class="award">
@@ -2007,7 +2304,7 @@ footer{
                 Second Place — Chem-E-Car Competition
             </strong>
             <br>
-            MEBEC Conference, Bahrain · KFUPM Team Sadeem
+            MEBEC Conference · Bahrain · KFUPM Team Sadeem
         </div>
 
         <div class="award">
@@ -2015,12 +2312,29 @@ footer{
                 Certificate of Achievement — Mentor
             </strong>
             <br>
-            CITEthon, CITE Conference · 2025
+            CITEthon · CITE Conference · 2025
+        </div>
+
+        <div class="award">
+            <strong>
+                Certificate of Appreciation
+            </strong>
+            <br>
+            KFUPM AIChE Student Chapter
+        </div>
+
+        <div class="award">
+            <strong>
+                Certificate of Participation
+            </strong>
+            <br>
+            SPE Petroleum Economics Symposium
         </div>
 
     </div>
 
 </div>
+
 </section>
 
 
@@ -2031,9 +2345,17 @@ footer{
 <div class="container">
 
     <div class="section-head">
-        <div class="section-kicker">Technical Expertise</div>
-        <h2 class="section-title">Laboratory &amp; Research Skills</h2>
+
+        <div class="section-kicker">
+            Technical Expertise
+        </div>
+
+        <h2 class="section-title">
+            Laboratory &amp; Research Skills
+        </h2>
+
     </div>
+
 
     <div class="tags">
 
@@ -2041,7 +2363,7 @@ footer{
         <span class="tag">XRD</span>
         <span class="tag">TGA</span>
         <span class="tag">ZetaSizer / DLS</span>
-        <span class="tag">UV–Vis</span>
+        <span class="tag">UV–Vis Spectroscopy</span>
         <span class="tag">Rheometry</span>
 
         <span class="tag">Nanomaterial Synthesis</span>
@@ -2058,6 +2380,67 @@ footer{
     </div>
 
 </div>
+
+</section>
+
+
+<!-- CV -->
+
+<section id="cv" class="content-section alt">
+
+<div class="container">
+
+    <div class="section-head">
+
+        <div class="section-kicker">
+            Curriculum Vitae
+        </div>
+
+        <h2 class="section-title">
+            Academic CV
+        </h2>
+
+    </div>
+
+
+    <div class="cv-box">
+
+        <div>
+
+            <h3>
+                Salem A. Bahadi — Curriculum Vitae
+            </h3>
+
+            <p>
+                View or download my current academic CV for detailed
+                information on education, research experience, publications,
+                teaching, awards, technical expertise, conferences, and
+                professional activities.
+            </p>
+
+        </div>
+
+
+        <div class="actions">
+
+            <a class="btn btn-primary"
+               href="Salem_Bahadi_CV.pdf"
+               target="_blank">
+                View CV
+            </a>
+
+            <a class="btn btn-outline"
+               href="Salem_Bahadi_CV.pdf"
+               download>
+                Download CV
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
 </section>
 
 
@@ -2080,18 +2463,25 @@ footer{
         <p>
             I welcome opportunities for academic collaboration and research
             discussions in advanced materials, environmental remediation,
-            adsorption, drilling-fluid systems, H₂S scavenging, and
-            data-driven chemical engineering.
+            adsorption, drilling-fluid systems, H₂S scavenging, complex
+            fluids, and data-driven chemical engineering.
         </p>
 
     </div>
 
+
     <div class="actions">
 
-        <a class="btn btn-primary"
-           style="background:#008568;"
+        <a class="btn btn-green"
            href="mailto:s.bahadi10@gmail.com">
-            Email Me
+            Email
+        </a>
+
+        <a class="btn btn-outline"
+           href="https://scholar.google.com/citations?user=uCiFhloAAAAJ&amp;hl=en"
+           target="_blank"
+           rel="noopener noreferrer">
+            Scholar
         </a>
 
         <a class="btn btn-outline"
@@ -2104,6 +2494,7 @@ footer{
     </div>
 
 </div>
+
 </section>
 
 
